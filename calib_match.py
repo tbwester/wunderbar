@@ -1,18 +1,11 @@
 #!/usr/bin/env python
 
 import numpy as np
-import matplotlib
-from matplotlib import rc, gridspec, cm
-import matplotlib.dates as mdates
-import matplotlib.pylab as plt
 from datetime import date, datetime, timedelta
 import os  
 
 def diff_dates(date1, date2):  
     return float(abs(date2-date1).total_seconds() / 60.)
-
-rc('font', **{'family': 'serif', 'serif': ['Computer Modern']})
-rc('text', usetex=True)
 
 try:
     os.remove("caliblist.txt")
